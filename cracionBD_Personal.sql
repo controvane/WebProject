@@ -1,7 +1,25 @@
+-----------------------------EJECUTAR PRIMERO-----------------------------
 create database Sistema_Web_de_Control_de_Personal1
 
 use Sistema_Web_de_Control_de_Personal1
+-----------------------------EJECUTAR SEGUNDO-----------------------------
+--EMPLEADO
+create table empleado(
+emp_no int primary key not null,
+fecha_nacimiento date not null,
+nombre varchar(14) not null,
+paterno varchar(16) not null,
+materno varchar(16),
+genero bit not null,
+fecha_contrato date not null
+)
 
+--DEPARTAMENTO
+create table departamento(
+depto_no char(4) primary key,
+depto_nombre varchar(40),
+)
+-----------------------------EJECUTAR TERCERO-----------------------------
 --DEPTO_EMP
 create table depto_emp(
 departamento_depto_no CHAR(4) not null,
@@ -39,20 +57,4 @@ sueldo int not null,
 hasta_fecha DATE,
 constraint fk_sueldo_empleado foreign key (emp_no) references empleado(emp_no)
 )
-
---EMPLEADO
-create table empleado(
-emp_no int primary key not null,
-fecha_nacimiento date not null,
-nombre varchar(14) not null,
-paterno varchar(16) not null,
-materno varchar(16),
-genero bit not null,
-fecha_contrato date not null
-)
-
---DEPARTAMENTO
-create table departamento(
-depto_no char(4) primary key,
-depto_nombre varchar(40),
-)
+-----------------------------FIN EJECUCION-----------------------------
