@@ -53,7 +53,7 @@ constraint fk_cargo_empleado foreign key (empleado_emp_no) references empleado(e
 create table sueldos(
 emp_no int not null,
 desde_fecha DATE primary key not null,
-sueldo int not null,
+sueldo float not null,
 hasta_fecha DATE,
 constraint fk_sueldo_empleado foreign key (emp_no) references empleado(emp_no)
 )
