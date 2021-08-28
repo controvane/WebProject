@@ -10,7 +10,7 @@ fecha_nacimiento date not null,
 nombre varchar(14) not null,
 paterno varchar(16) not null,
 materno varchar(16),
-genero bit not null,
+genero bit not null, ------0 mujeres, 1 hombres------
 fecha_contrato date not null
 )
 
@@ -53,8 +53,35 @@ constraint fk_cargo_empleado foreign key (empleado_emp_no) references empleado(e
 create table sueldos(
 emp_no int not null,
 desde_fecha DATE primary key not null,
-sueldo float not null,
+sueldo int not null,
 hasta_fecha DATE,
 constraint fk_sueldo_empleado foreign key (emp_no) references empleado(emp_no)
 )
------------------------------FIN EJECUCION-----------------------------
+-----------------------------EJECUTAR CUARTO-----------------------------
+
+--Insertanto Empleados--
+insert into empleado values(1,'1995-10-31','Lucia','Duran','Flores',0,'2021-05-20');
+insert into empleado values(2,'1980-10-13','Edgar','Duran','Quisbert',1,'2021-01-15');
+insert into empleado values(3,'1997-07-31','Mayra','Duran','Flores',0,'2021-03-01');
+insert into empleado values(4,'1990-02-17','Ariel','Cortez','Davila',1,'2021-02-15');
+insert into empleado values(5,'1992-12-20','Abigail','Arias','Espinoza',0,'2020-02-20');
+insert into empleado values(6,'1991-09-15','Martin','Ajacopa','Laime',1,'2020-01-15');
+insert into empleado values(7,'1988-08-20','Ruth','Zabaleta','Cespedes',0,'2021-04-22');
+insert into empleado values(8,'1985-08-10','Armando','Paredes','Rojas',1,'2020-08-10');
+insert into empleado values(9,'1970-03-13','Luis','Tito','Tejerina',1,'2020-07-15');
+insert into empleado values(10,'1985-06-06','Rene','Gando','Pasto',1,'2021-01-05');
+
+--Insertando Departamento--
+insert into departamento values (1,'Finanzas');
+insert into departamento values (2,'Gerencia');
+insert into departamento values (3,'Limpieza');
+insert into departamento values (4,'Sistemas');
+insert into departamento values (5,'Tecnica');
+insert into departamento values (6,'Legal');
+insert into departamento values (7,'Marketing');
+insert into departamento values (8,'Operaciones y Logistica');
+insert into departamento values (9,'Ventas');
+insert into departamento values (10,'Cocina');
+
+-----------------------------EJECUTAR QUINTO-----------------------------+-----------------------------
+
