@@ -72,16 +72,64 @@ insert into empleado values(9,'1970-03-13','Luis','Tito','Tejerina',1,'2020-07-1
 insert into empleado values(10,'1985-06-06','Rene','Gando','Pasto',1,'2021-01-05');
 
 --Insertando Departamento--
-insert into departamento values (1,'Finanzas');
+insert into departamento values (1,'Rectorado');
 insert into departamento values (2,'Gerencia');
-insert into departamento values (3,'Limpieza');
+insert into departamento values (3,'Secretaria');
 insert into departamento values (4,'Sistemas');
 insert into departamento values (5,'Tecnica');
 insert into departamento values (6,'Legal');
 insert into departamento values (7,'Marketing');
 insert into departamento values (8,'Operaciones y Logistica');
 insert into departamento values (9,'Ventas');
-insert into departamento values (10,'Cocina');
+insert into departamento values (10,'Finanzas');
 
 -----------------------------EJECUTAR QUINTO-----------------------------+-----------------------------
+--Insertando Cargo--
+insert into cargo values (1,'Rector','2021-08-29','2021-10-20');
+insert into cargo values (2,'Vicerrector','2021-08-29','2021-11-20');
+insert into cargo values (3,'SecretarioGeneral','2021-08-29','2021-11-20');
+insert into cargo values (4,'Fiscal','2021-08-29','2021-11-20');
+insert into cargo values (5,'Decanos','2021-08-29','2021-11-20');
+insert into cargo values (6,'DirectorElectronica','2021-08-29','2021-11-20');
+insert into cargo values (7,'DirectorSistemasInformaticos','2021-08-29','2021-11-20');
+insert into cargo values (8,'DirectorTelecomunicaciones','2021-08-29','2021-11-20');
+insert into cargo values (9,'Docente','2021-08-29','2021-11-20');
+insert into cargo values (10,'Finanzas','2021-08-29','2021-11-20');
 
+----------------------------Ejecutar Sexto ----------------------------------------------------------
+--Insertando Sueldo--
+insert into sueldos values (1,'2021-08-29',42000,'2021-12-24');
+insert into sueldos values (2,'2021-08-29',40000,'2021-12-24');
+insert into sueldos values (3,'2021-08-29',32000,'2021-12-24');
+insert into sueldos values (4,'2021-08-29',30000,'2021-12-24');
+insert into sueldos values (5,'2021-08-29',22000,'2021-12-24');
+insert into sueldos values (6,'2021-08-29',20000,'2021-12-24');
+insert into sueldos values (7,'2021-08-29',12000,'2021-12-24');
+insert into sueldos values (8,'2021-08-29',11000,'2021-12-24');
+insert into sueldos values (9,'2021-08-29',10000,'2021-12-24');
+insert into sueldos values (10,'2021-08-29',9000,'2021-12-24');
+----------------------------Ejecutar Septimo ----------------------------------------------------------
+--Insertando depto_emp--
+ insert into depto_emp values (1,1,'2021-08-29','2021-12-24');
+ insert into depto_emp values (2,2,'2021-08-29','2021-12-24');
+ insert into depto_emp values (3,3,'2021-08-29','2021-12-24');
+ insert into depto_emp values (4,4,'2021-08-29','2021-12-24');
+ insert into depto_emp values (5,5,'2021-08-29','2021-12-24');
+ insert into depto_emp values (6,6,'2021-08-29','2021-12-24');
+ insert into depto_emp values (7,7,'2021-08-29','2021-12-24');
+ insert into depto_emp values (8,8,'2021-08-29','2021-12-24');
+ insert into depto_emp values (9,9,'2021-08-29','2021-12-24');
+ insert into depto_emp values (10,10,'2021-08-29','2021-12-24');
+
+ ----------------------------Ejecutar Octavo ----------------------------------------------------------
+--Insertando depto_Jefe--
+insert into depto_jefe values (1,1,'2021-08-29','2021-12-24');
+insert into depto_jefe values (2,2,'2021-08-29','2021-12-24');
+insert into depto_jefe values (3,3,'2021-08-29','2021-12-24');
+insert into depto_jefe values (4,4,'2021-08-29','2021-12-24');
+insert into depto_jefe values (5,5,'2021-08-29','2021-12-24');
+insert into depto_jefe values (5,6,'2021-08-29','2021-12-24');
+insert into depto_jefe values (5,7,'2021-08-29','2021-12-24');
+insert into depto_jefe values (5,8,'2021-08-29','2021-12-24');
+insert into depto_jefe values (5,9,'2021-08-29','2021-12-24');
+insert into depto_jefe values (5,10,'2021-08-29','2021-12-24');
