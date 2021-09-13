@@ -1,6 +1,6 @@
-create 
+create database rrhh;
 
-use Sistema_Web_de_Control_de_Personal1
+use rrhh;
 
 -----------------------------EJECUTAR SEGUNDO-----------------------------
 --EMPLEADO
@@ -12,20 +12,21 @@ paterno varchar(16) not null,
 materno varchar(16),
 genero bit not null, ------0 mujeres, 1 hombres------
 fecha_contrato date not null
-)
+);
 
 --DEPARTAMENTO
 create table departamento(
 depto_no char(4) primary key,
 depto_nombre varchar(40),
-)
+);
 -----------------------------EJECUTAR TERCERO-----------------------------
 --DEPTO_EMP
 create table depto_emp(
 departamento_depto_no CHAR(4) not null,
 empleado_emp_no int not null,
-fecha_ini DATE primary key not null,
+fecha_ini DATE not null,
 fecha_fin DATE,
+constraint pk_depto_emp primary key (departamento_depto_no,empleado_emp_no,fecha_ini), 
 constraint fk_emp_no foreign key (empleado_emp_no) references empleado(emp_no),
 constraint fk_depto_no foreign key (departamento_depto_no) references departamento(depto_no)
 )
@@ -36,6 +37,7 @@ empleado_emp_no int not null,
 departamento_depto_no char(4) not null,
 fecha_ini DATE not null,
 fecha_fin DATE,
+constraint pk_depto_jefe primary key (empleado_emp_no,departamento_depto_no), 
 constraint fk_depto_jefe_e foreign key (empleado_emp_no) references empleado(emp_no),
 constraint fk_depto_jefe_d foreign key (departamento_depto_no) references departamento(depto_no)
 )
@@ -43,18 +45,20 @@ constraint fk_depto_jefe_d foreign key (departamento_depto_no) references depart
 --CARGO
 create table cargo(
 empleado_emp_no int not null,
-cargo varchar(50) primary key not null,
+cargo varchar(50) not null,
 fecha_ini DATE not null,
 fecha_fin DATE,
+constraint pk_cargo primary key (empleado_emp_no,cargo,fecha_ini), 
 constraint fk_cargo_empleado foreign key (empleado_emp_no) references empleado(emp_no)
 )
 
 --SUELDOS
 create table sueldos(
 emp_no int not null,
-desde_fecha DATE primary key not null,
+desde_fecha DATE not null,
 sueldo int not null,
 hasta_fecha DATE,
+constraint pk_sueldos primary key (emp_no,desde_fecha), 
 constraint fk_sueldo_empleado foreign key (emp_no) references empleado(emp_no)
 )
 -----------------------------EJECUTAR CUARTO-----------------------------
