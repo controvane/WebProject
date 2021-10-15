@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoMVCIntelYgentes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/MiEstilo.css" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-3">
+            <div id="cabeImg">
+                <br />
+                <img src="~/Images/logo.png" class="img-fluid" />
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div id="cabecera">
+                <div class="text-xl-left">
+                    <h1>
+                        Grupo Intel y Gentes  <br />
+                        Sitio con ASP Net Core MVC
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cabeImg">
+        <br />
+        <img src="~/Images/logo.png" class="img-fluid" />
+    </div>
+    <div id="menu">
+        <h2>MENU</h2>
+        <dl>
+            <dt><a href="~/Home/Index">Principal</a></dt>
+            <dt><a href="~/Home/Index">Acerca de...</a></dt>
+            <dt><a href="~/Home/Index">Contacto</a></dt>
+            <dt><a href="~/Home/Index">MyApp</a></dt>
+        </dl>
+    </div>
+
+    <div id="contenido">
+        @RenderBody()
+    </div>
+</body>
+</html>

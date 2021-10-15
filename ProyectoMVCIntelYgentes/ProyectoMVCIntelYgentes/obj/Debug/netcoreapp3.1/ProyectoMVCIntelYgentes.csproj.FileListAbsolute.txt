@@ -168,3 +168,4 @@ F:\PRW3_2021\ProyectoMVCIntelYgentes\ProyectoMVCIntelYgentes\obj\Debug\netcoreap
 F:\PRW3_2021\ProyectoMVCIntelYgentes\ProyectoMVCIntelYgentes\obj\Debug\netcoreapp3.1\Razor\Views\Empleados\Details.cshtml.g.cs
 F:\PRW3_2021\ProyectoMVCIntelYgentes\ProyectoMVCIntelYgentes\obj\Debug\netcoreapp3.1\Razor\Views\Empleados\Edit.cshtml.g.cs
 F:\PRW3_2021\ProyectoMVCIntelYgentes\ProyectoMVCIntelYgentes\obj\Debug\netcoreapp3.1\Razor\Views\Empleados\Index.cshtml.g.cs
+F:\PRW3_2021\ProyectoMVCIntelYgentes\ProyectoMVCIntelYgentes\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_MiDisenio.cshtml.g.cs
