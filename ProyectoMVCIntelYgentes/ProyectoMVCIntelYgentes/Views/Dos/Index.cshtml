@@ -1,0 +1,18 @@
+﻿
+@model ProyectoMVCIntelYgentes.ViewModels.DosIndex
+@{
+    ViewData["Title"] = "Controlador Dos";
+}
+
+<h1>Index - Dos </h1>
+@Model.Num1
+<br />
+@Model.Num2
+<form asp-action="Procesar" asp-controller="Dos" method="post">
+    <label asp-for="@Model.Num1"></label><input asp-for="@Model.Num1" />
+    <br />
+    <label asp-for="@Model.Num2"></label><input asp-for="@Model.Num2" />
+    <br/>
+    Ingrese Cadena:<input asp-for="@Model.Num2" />
+    <input type="submit" />
+</form>

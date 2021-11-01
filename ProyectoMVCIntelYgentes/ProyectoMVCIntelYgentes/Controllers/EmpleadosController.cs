@@ -133,24 +133,6 @@ namespace ProyectoMVCIntelYgentes.Controllers
             return View(empleado);
         }
 
-        // GET: Empleados/Delete/5
-        public async Task<IActionResult> Firing(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var empleado = await _context.Empleado
-                .FirstOrDefaultAsync(m => m.EmpNo == id);
-            if (empleado == null)
-            {
-                return NotFound();
-            }
-
-            return View(empleado);
-        }
-
         // POST: Empleados/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Javier Murguia\\Documents\\Universidad\\progra web 3 - intento 2\\proyecto final git\\WebProject\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes.csproj": {}
+    "F:\\PRW3_2021\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Javier Murguia\\Documents\\Universidad\\progra web 3 - intento 2\\proyecto final git\\WebProject\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes.csproj": {
+    "F:\\PRW3_2021\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Javier Murguia\\Documents\\Universidad\\progra web 3 - intento 2\\proyecto final git\\WebProject\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes.csproj",
+        "projectUniqueName": "F:\\PRW3_2021\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes.csproj",
         "projectName": "ProyectoMVCIntelYgentes",
-        "projectPath": "C:\\Users\\Javier Murguia\\Documents\\Universidad\\progra web 3 - intento 2\\proyecto final git\\WebProject\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes.csproj",
-        "packagesPath": "C:\\Users\\Javier Murguia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Javier Murguia\\Documents\\Universidad\\progra web 3 - intento 2\\proyecto final git\\WebProject\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\obj\\",
+        "projectPath": "F:\\PRW3_2021\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes.csproj",
+        "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+        "outputPath": "F:\\PRW3_2021\\ProyectoMVCIntelYgentes\\ProyectoMVCIntelYgentes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Javier Murguia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,13 +57,13 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.18, )"
+              "version": "[3.1.20, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.18, )"
+              "version": "[3.1.20, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

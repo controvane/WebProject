@@ -1,0 +1,63 @@
+﻿@model ProyectoMVCIntelYgentes.ViewModels.AsignacionCargo
+@{
+    ViewData["Title"] = "Cargo";
+}
+
+<h1>Asignacion Cargo</h1>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.FechaNacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.FechaNacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.Paterno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.Paterno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.Materno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.Materno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.Genero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.Genero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Empleado.FechaContrato)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Empleado.FechaContrato)
+        </dd>
+    </dl>
+
+
+</div>
+<div>
+    <form asp-action="RegistrarCargo">
+       <label asp-for="Cargo"></label>
+        <input asp-for="Cargo" />
+        <br />
+        <label asp-for="FechaInicio"></label>
+        <input asp-for="FechaInicio" disabled="disabled" />
+        <br/>
+        <input type="submit" />
+    </form>
+</div>
+
