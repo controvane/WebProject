@@ -115,6 +115,39 @@ namespace ProyectoMVCIntelYgentes.Controllers
             return View(empleado);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Firing(int id, [Bind("EmpNo,FechaNacimiento,Nombre,Paterno,Materno,Genero,FechaContrato")] Empleado empleado)
+        {
+            if (id != empleado.EmpNo)
+            {
+                return NotFound();
+            }
+            //Seccion para actualizar las otras tablas para el despido
+            rrhhContext db = new rrhhContext();
+            try {
+                Empleado newEmpleado = db.Empleado.SingleOrDefault(b => b.EmpNo == empleado.EmpNo); ;
+                newEmpleado.FechaContrato = null;
+                var deptoEmpToUpdate = db.DeptoEmp.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
+                deptoEmpToUpdate.FechaFin = DateTime.Now;
+                var sueldo = db.Sueldos.SingleOrDefault(b => b.EmpNo == empleado.EmpNo);
+                sueldo.HastaFecha = DateTime.Now;
+                var cargo = db.Cargo.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
+                cargo.FechaFin = DateTime.Now;
+                if (db.DeptoJefe.Include(EmpleadoEmpNo => empleado.EmpNo).ToList().Count > 0)
+                {
+                    var deptoJefe = db.DeptoJefe.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
+                    deptoJefe.FechaFin = DateTime.Now;
+                }
+                db.SaveChanges();
+            }
+            catch (Exception) {
+                return NotFound();
+            }
+            
+            return RedirectToAction(nameof(Index));
+        }
+
         // GET: Empleados/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
