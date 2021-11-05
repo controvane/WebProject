@@ -139,7 +139,7 @@ namespace ProyectoMVCIntelYgentes.Controllers
                     var deptoJefe = db.DeptoJefe.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
                     deptoJefe.FechaFin = DateTime.Now;
                 }
-                db.SaveChanges();
+                await db.SaveChangesAsync();
             }
             catch (Exception) {
                 return NotFound();
