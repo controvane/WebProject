@@ -134,7 +134,7 @@ namespace ProyectoMVCIntelYgentes.Controllers
                 sueldo.HastaFecha = DateTime.Now;
                 var cargo = db.Cargo.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
                 cargo.FechaFin = DateTime.Now;
-                if (db.DeptoJefe.Include(EmpleadoEmpNo => empleado.EmpNo).ToList().Count > 0)
+                if (db.DeptoJefe.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo) != null)
                 {
                     var deptoJefe = db.DeptoJefe.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
                     deptoJefe.FechaFin = DateTime.Now;
