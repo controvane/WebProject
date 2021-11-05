@@ -115,7 +115,7 @@ namespace ProyectoMVCIntelYgentes.Controllers
             return View(empleado);
         }
 
-        //[HttpPost]
+        [HttpPost]
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Firing(int id, [Bind("EmpNo,FechaNacimiento,Nombre,Paterno,Materno,Genero,FechaContrato")] Empleado empleado)
         {

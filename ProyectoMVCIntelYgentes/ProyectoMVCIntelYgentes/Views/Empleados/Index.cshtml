@@ -58,14 +58,16 @@
                 <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.EmpNo">Edit</a> |
                 <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.EmpNo">Details</a> |
                 <a class="btn btn-primary" asp-action="Delete" asp-route-id="@item.EmpNo">Delete</a>  |
-                <span id="fireSpan_@item.EmpNo">
-                    <a href="#" class="btn btn-primary" onclick="confirmFire('@item.EmpNo',true)">Fire</a>
-                </span>
-                <span id="confirmFireSpan_@item.EmpNo" style="display:none">
-                    <span>¿Esta seguro que desea despedir a @item.Nombre @item.Paterno @item.Materno?   </span>
-                    <a class="btn btn-primary" asp-action="Firing" asp-route-id="@item.EmpNo">Yes</a>  |
-                    <a href="#" class="btn btn-primary" onclick="confirmFire('@item.EmpNo',false)">No</a>
-                </span>
+                <form asp-action="Firing" asp-route-id="@item.EmpNo" style="display:inline">
+                    <span id="fireSpan_@item.EmpNo">
+                        <a href="#" class="btn btn-primary" onclick="confirmFire('@item.EmpNo',true)">Fire</a>
+                    </span>
+                    <span id="confirmFireSpan_@item.EmpNo" style="display:none">
+                        <span>¿Esta seguro que desea despedir a @item.Nombre @item.Paterno @item.Materno?   </span>
+                        <input type="submit" value="Yes" class="btn btn-primary"/> |
+                        <a href="#" class="btn btn-primary" onclick="confirmFire('@item.EmpNo',false)">No</a>
+                    </span>
+                </form>              
             </td>
         </tr>
 }
