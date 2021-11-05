@@ -115,12 +115,13 @@ namespace ProyectoMVCIntelYgentes.Controllers
             return View(empleado);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Firing(int id, [Bind("EmpNo,FechaNacimiento,Nombre,Paterno,Materno,Genero,FechaContrato")] Empleado empleado)
         {
             if (id != empleado.EmpNo)
             {
+                Console.WriteLine("Patatas con empanadas");
                 return NotFound();
             }
             //Seccion para actualizar las otras tablas para el despido
@@ -142,6 +143,7 @@ namespace ProyectoMVCIntelYgentes.Controllers
                 await db.SaveChangesAsync();
             }
             catch (Exception) {
+                Console.WriteLine("Holiwis kiwis");
                 return NotFound();
             }
             
