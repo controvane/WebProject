@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoMVCIntelYgentes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/MiEstilo.css" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-3">
+            <div id="cabeImg">
+                <br />
+                <img src="~/Images/logo.png" class="img-fluid" />
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div id="cabecera">
+                <div class="text-xl-left">
+                    <h1>
+                        Grupo Intel y Gentes  <br />
+                        Sitio con ASP Net Core MVC
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cabeImg">
+        <br />
+        <img src="~/Images/logo.png" class="img-fluid" />
+    </div>
+    <div id="menu">
+        <h2>MENU</h2>
+        <dl>
+            <dt><a href="~/Home/Index">Principal</a></dt>
+            <dt><a asp-controller="Libre" asp-action="Index">Uso libre</a></dt>
+            <dt><a asp-controller="Restringido" asp-action="Index">Restringido</a></dt>
+            <dt><a asp-controller="Admin" asp-action="Index">Rol Admin</a></dt>
+            <dt><a asp-controller="Empleados" asp-action="Index">Empleados</a></dt>
+            <dt><a asp-controller="Asignacion" asp-action="Index">Asignacion</a></dt>
+            <dt><a asp-controller="Departamentos" asp-action="Index">Departamento</a></dt>
+            <dt><a asp-controller="AsignacionDep" asp-action="Index">AsignacionDep</a></dt>
+            <dt><a href="~/Home/Index">MyApp</a></dt>
+            <dt><partial name="_LoginPartial" /></dt>
+        </dl>
+    </div>
+    <div class="col-sm-11">
+        <div id="contenido">
+            @RenderBody()
+        </div>
+    </div>
+
+    @*@if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts", required: true);
+    }*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

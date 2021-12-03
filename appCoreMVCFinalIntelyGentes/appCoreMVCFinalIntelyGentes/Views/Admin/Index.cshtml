@@ -1,0 +1,39 @@
+﻿@model appCoreMVCFinalIntelyGentes.ViewModels.AdminIndex
+
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<h1>Administrador</h1>
+<table border="1">
+
+    @foreach(var item in @Model.lista1)
+            {
+    <tr>
+        <td>
+            @item.Id
+        </td>
+        <td>
+            @item.UserName
+        </td>
+
+    </tr>
+            }
+</table>
+<br/>
+<table border="1">
+
+    @foreach (var item in @Model.lista2)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Name
+            </td>
+
+        </tr>
+    }
+</table>
+<br />
