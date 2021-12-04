@@ -8788,23 +8788,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Carlos\\.nuget\\packages\\": {},
+    "C:\\Users\\Javier Murguia\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\PRW3_2021\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes.csproj",
+      "projectUniqueName": "C:\\Users\\Javier Murguia\\Documents\\Universidad\\progra web 3 - intento 2\\proyecto final git\\WebProject\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes.csproj",
       "projectName": "appCoreMVCFinalIntelyGentes",
-      "projectPath": "F:\\PRW3_2021\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes.csproj",
-      "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-      "outputPath": "F:\\PRW3_2021\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes\\obj\\",
+      "projectPath": "C:\\Users\\Javier Murguia\\Documents\\Universidad\\progra web 3 - intento 2\\proyecto final git\\WebProject\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes.csproj",
+      "packagesPath": "C:\\Users\\Javier Murguia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Javier Murguia\\Documents\\Universidad\\progra web 3 - intento 2\\proyecto final git\\WebProject\\appCoreMVCFinalIntelyGentes\\appCoreMVCFinalIntelyGentes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Javier Murguia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8873,7 +8873,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

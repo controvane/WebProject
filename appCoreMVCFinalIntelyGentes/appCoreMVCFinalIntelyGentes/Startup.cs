@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using appCoreMVCFinalIntelyGentes.Models.Datos;
 
 namespace appCoreMVCFinalIntelyGentes
 {
@@ -30,6 +31,9 @@ namespace appCoreMVCFinalIntelyGentes
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<rrhhContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("rrhhConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
