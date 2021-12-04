@@ -23,7 +23,7 @@ namespace appCoreMVCFinalIntelyGentes.Models.Datos
         public string Paterno { get; set; }
         public string Materno { get; set; }
         public bool Genero { get; set; }
-        public DateTime FechaContrato { get; set; }
+        public DateTime? FechaContrato { get; set; }
 
         public virtual ICollection<Cargo> Cargo { get; set; }
         public virtual ICollection<DeptoEmp> DeptoEmp { get; set; }

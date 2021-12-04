@@ -115,6 +115,42 @@ namespace appCoreMVCFinalIntelyGentes.Controllers
             return View(empleado);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Firing(int id, [Bind("EmpNo,FechaNacimiento,Nombre,Paterno,Materno,Genero,FechaContrato")] Empleado empleado)
+        {
+            if (id != empleado.EmpNo)
+            {
+                Console.WriteLine("No encontre el registro");
+                return NotFound();
+            }
+            //Seccion para actualizar las otras tablas para el despido
+            rrhhContext db = new rrhhContext();
+            try
+            {
+                Empleado newEmpleado = db.Empleado.SingleOrDefault(b => b.EmpNo == empleado.EmpNo);
+                newEmpleado.FechaContrato = null;
+                DeptoEmp deptoEmpToUpdate = db.DeptoEmp.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
+                deptoEmpToUpdate.FechaFin = DateTime.Now;
+                Sueldos sueldo = db.Sueldos.SingleOrDefault(b => b.EmpNo == empleado.EmpNo);
+                sueldo.HastaFecha = DateTime.Now;
+                Cargo cargo = db.Cargo.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
+                cargo.FechaFin = DateTime.Now;
+                if (db.DeptoJefe.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo) != null)
+                {
+                    DeptoJefe deptoJefe = db.DeptoJefe.SingleOrDefault(b => b.EmpleadoEmpNo == empleado.EmpNo);
+                    deptoJefe.FechaFin = DateTime.Now;
+                }
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("No pude escribir algo a la bd");
+                return NotFound();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
         // GET: Empleados/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
